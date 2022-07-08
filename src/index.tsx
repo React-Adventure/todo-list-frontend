@@ -1,8 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './components/App';
 import './styles/index.scss';
 
-if (!new class { x: Array<number>; }().hasOwnProperty('x')) throw new Error('Transpiler is not configured correctly');
+const root = createRoot(document.getElementById('root'));
 
-ReactDOM.render(<App />, document.getElementById('root'));
+root.render(<App />);
+
+// eslint-disable-next-line max-len
+if (!new class { x: Array<number>; }().hasOwnProperty('x')) throw new Error('Transpiler is not configured correctly');

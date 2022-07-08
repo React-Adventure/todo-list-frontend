@@ -12,6 +12,9 @@ module.exports = {
       favicon: path.join(__dirname, 'public', 'favicon.ico'),
     }),
   ],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
   module: {
     rules: [
       {
@@ -31,30 +34,24 @@ module.exports = {
       },
       {
         test: /\.(ts|tsx)$/,
-        resolve: {
-          extensions: ['.tsx', '.ts', '.js'],
-        },
         exclude: /node_modules/,
         use: [
-          {
-            loader: 'ts-loader',
-          },
           {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
               plugins: [
                 // ['@babel/plugin-transform-flow-strip-types'],
-                ['@babel/plugin-transform-runtime'/*, {
+                ['@babel/plugin-transform-runtime', {
                   regenerator: true,
-                }*/],
+                }],
                 // ['@babel/plugin-proposal-decorators', {
                 //   legacy: true,
                 // }],
-                ['@babel/plugin-proposal-class-properties', { loose: false }],
+                ['@babel/plugin-proposal-class-properties'],
               ],
               assumptions: {
-                setPublicClassFields: true,
+                setPublicClassFields: false,
               },
             },
           },
@@ -74,12 +71,5 @@ module.exports = {
         options: { limit: false },
       },
     ],
-  },
-  // externals: {
-  //   "react": "React",
-  //   "react-dom": "ReactDOM"
-  // },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
   },
 };

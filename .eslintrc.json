@@ -33,6 +33,7 @@
         "no-multi-spaces": ["warn"],
         "no-trailing-spaces": ["warn"],
         "eol-last": "off",
-        "quotes": "warn"
+        "quotes": "warn",
+        "import/no-extraneous-dependencies": "warn"
     }
 }

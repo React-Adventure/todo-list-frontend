@@ -8,12 +8,12 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-      host: 'localhost',
-      port: port,
-      historyApiFallback: true,
-      open: true
+    host: 'localhost',
+    port,
+    historyApiFallback: true,
+    open: true,
   },
 //   plugins: [
 //     new BundleAnalyzerPlugin(),
 //   ]
-  });
+});

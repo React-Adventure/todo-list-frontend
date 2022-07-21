@@ -1,13 +1,15 @@
 import React from 'react';
-import Counter from './Counter';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import TodosPage from '../pages/ToDoPage';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <h1>Hello ToDo List!</h1>
-      <Counter />
-    </>
+    <HashRouter>
+      <Routes>
+        <Route exact path="/" element={<TodosPage />} />
+      </Routes>
+    </HashRouter>
   );
-}
+};
 
 export default App;

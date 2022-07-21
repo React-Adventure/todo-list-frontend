@@ -9,12 +9,10 @@ class Counter {
 
   increment() {
     this.count += 1;
-    console.log(this.count);
   }
 
   decrement() {
     this.count -= 1;
-    console.log(this.count);
   }
 }
 

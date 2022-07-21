@@ -1,0 +1,12 @@
+.add-todo {
+  display: flex;
+  
+  &-form {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 500px;
+    margin: 0 30px;
+  }
+}
+

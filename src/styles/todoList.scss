@@ -1,0 +1,18 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 20px;
+  margin: 50px;
+}
+
+.list-size {
+  height: 500px;
+  width: 350px;
+
+  background-color: rgb(227, 244, 237);
+  border-radius: 10px;
+  overflow: auto;
+}

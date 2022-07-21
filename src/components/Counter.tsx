@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { makeAutoObservable } from 'mobx';
+import React, { useState } from 'react';
 import { observer } from 'mobx-react-lite';
 import counter from '../store/counter';
 
 const Counter = observer(() => {
-  const a = 1;
+  const [co, setCo] = useState();
 
   return (
     <div>
@@ -17,5 +15,8 @@ const Counter = observer(() => {
     </div>
   );
 });
+
+const sum = (a: number, b: number) => a + b;
+sum(1, 2);
 
 export default Counter;

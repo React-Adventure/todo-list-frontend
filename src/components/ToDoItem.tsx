@@ -41,7 +41,7 @@ const ToDoItem: React.FC<TodoListProps> = (props: TodoListProps) => {
               <Box width="90%">
                 <Heading textOverflow="ellipsis" as="h4" size="md" className="">{todo.title}</Heading>
                 <Text textOverflow="ellipsis" className="">{todo.descr || 'sdfisdofijsoidfjs sdiofjsodifj'}</Text>
-                <Input type="text"></Input>
+                <Input type="text" border="none" />
               </Box>
             </Box>
             <Box display="flex" alignItems="center">

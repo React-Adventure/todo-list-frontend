@@ -2,12 +2,19 @@
 @import './todoList';
 @import './todo';
 @import './addTodo';
+@import './fonts';
 
 body {
     box-sizing: border-box !important;
+    font-family: 'Quicksand', sans-serif !important;
 }
 
 ul {
     list-style: none;
     box-sizing: border-box;
+}
+
+.chakra-wrap  {
+    display: flex;
+    justify-content: space-around;
 }

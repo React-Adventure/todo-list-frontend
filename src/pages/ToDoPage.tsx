@@ -6,7 +6,6 @@ import TodoList from '../components/_ToDoList';
 import { IToDo } from '../utils/interfaces';
 import ToDoItem from '../components/ToDoItem';
 import AddTodo from '../components/AddTodo';
-import Modal from '../components/Modal';
 
 declare let confirm: (question: string) => boolean;
 
@@ -71,13 +70,10 @@ const TodosPage: React.FC = () => {
         onRemove={removeHandler}
       />
       <Icon as={MdSettings} /> */}
-      <WrapItem>sdfksdpofk psdokfpos kdfop</WrapItem>
 
-      <WrapItem width="100%">
+      <WrapItem width="100%" display="flex" justifyContent="center">
         <AddTodo addTodo={setTodos} todos={todos} />
       </WrapItem>
-
-      {/* <WrapItem><Modal /></WrapItem> */}
 
       <WrapItem>
         <ToDoItem
